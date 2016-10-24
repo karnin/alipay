@@ -1,5 +1,5 @@
 <?php
-namespace Karnin\Alipay\app;
+namespace Karnin\Alipay;
 
 class Alipay
 {
