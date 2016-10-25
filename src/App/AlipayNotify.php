@@ -17,6 +17,7 @@ class AlipayNotify {
 
     function __construct($alipay_config){
         $this->alipay_config = $alipay_config;
+        $this->alipay_config['cacert']='../cacert.pem';
     }
 
 
