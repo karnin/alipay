@@ -37,7 +37,7 @@ class Alipay
         $result['body'] = $data['body'];
         $result['total_fee'] = $data['total_fee'];
         $result['notify_url'] = $data['notify_url'];
-        $d = Core::createLinkstring($data);
+        $d = Core::createLinkstring($result);
         $rsa_sign = urlencode(Rsa::rsaSign($d, $this->config['private_key']));
         $d = $d . '&sign=' . '"' . $rsa_sign . '"' . '&sign_type=' . '"' . $this->config['sign_type'] . '"';
         return $d;
